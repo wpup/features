@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Features
- * Description: Setting page for feature flag-driven development.
+ * Description: WordPress setting page for feature flag-driven development.
  * Author: Fredrik Forsmo
  * Author URI: https://frozzare.com
  * Version: 1.0.0

@@ -10,7 +10,7 @@
     <const name="WTS_PLUGIN_FILE_NAME" value="plugin.php" />
   </php>
   <testsuites>
-    <testsuite name="WP REST API Routes Test Suite">
+    <testsuite name="Features Test Suite">
       <directory suffix=".php">./tests/</directory>
     </testsuite>
   </testsuites>

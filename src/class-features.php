@@ -52,7 +52,7 @@ class Features {
 		$title      = esc_html__( 'Features', 'features' );
 		$capability = apply_filters( 'features_capability', 'administrator' );
 		$slug       = 'features';
-		$features   = $this->features;
+		$features   = is_array( $this->features ) ? $this->features : [];
 		$labels     = apply_filters( 'features_labels', [] );
 
 		add_submenu_page( $parent, $title, $title, $capability, $slug, function () use ( $features, $labels ) {

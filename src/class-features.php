@@ -52,7 +52,7 @@ class Features {
 		$title      = esc_html__( 'Features', 'features' );
 		$capability = apply_filters( 'features_capability', 'administrator' );
 		$slug       = 'features';
-		$features   = is_array( $this->features ) ? $this->features : [];
+		$features   = $this->get_features();
 		$labels     = apply_filters( 'features_labels', [] );
 
 		add_submenu_page( $parent, $title, $title, $capability, $slug, function () use ( $features, $labels ) {
@@ -65,7 +65,7 @@ class Features {
 	 */
 	public function enable_features() {
 		$features  = features()->getData();
-		$features2 = get_option( 'features', [] );
+		$features2 = ! empty( $this->features ) ? $this->features : get_option( 'features', [] );
 
 		foreach ( $features as $key => $value ) {
 			if ( ! isset( $features2[$key] ) ) {
@@ -81,6 +81,23 @@ class Features {
 				$this->features[$key] = false;
 			}
 		}
+	}
+
+	/**
+	 * Get features.
+	 *
+	 * @return array
+	 */
+	protected function get_features() {
+		if ( ! empty( $_POST['features'] ) ) {
+			$this->features = $_POST['features'];
+		}
+
+		if ( empty( $this->features ) ) {
+			$this->enable_features();
+		}
+
+		return is_array( $this->features ) ? $this->features : [];
 	}
 
 	/**

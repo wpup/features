@@ -17,11 +17,9 @@
     ]
  },
   "keywords": [
-    "yllet",
-    "wp-rest-api",
-    "api",
-    "rest",
-    "routes",
+    "feature",
+    "features",
+    "fdd",
     "wordpress"
   ],
   "require": {

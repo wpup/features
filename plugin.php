@@ -15,12 +15,6 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
     require_once __DIR__ . '/vendor/autoload.php';
 }
 
-features( [
-    'log' => false,
-    'checkout' => true,
-    'startpage' => true
-] );
-
 /**
  * Bootstrap plugin.
  */

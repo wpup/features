@@ -65,7 +65,11 @@ class Features {
 	 */
 	public function enable_features() {
 		$features  = features()->getData();
-		$features2 = ! empty( $this->features ) ? $this->features : get_option( 'features', [] );
+		$features2 = $this->features;
+
+		if ( empty( $features2 ) || ! is_array( $features2 ) ) {
+			$features2 = get_option( 'features', [] );
+		}
 
 		foreach ( $features as $key => $value ) {
 			if ( ! isset( $features2[$key] ) ) {
@@ -89,7 +93,7 @@ class Features {
 	 * @return array
 	 */
 	protected function get_features() {
-		if ( ! empty( $_POST['features'] ) ) {
+		if ( ! empty( $_POST['features'] ) && is_array( $_POST['features'] ) ) {
 			$this->features = $_POST['features'];
 		}
 

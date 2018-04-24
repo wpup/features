@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/wpup/features.svg?branch=master)](https://travis-ci.org/wpup/features)
 
-WordPress admin for [php-features](https://github.com/frozzare/php-features).
+WordPress admin settings page for [php-features](https://github.com/frozzare/php-features).
 
 ## Install
 

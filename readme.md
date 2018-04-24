@@ -35,7 +35,7 @@ add_filter( 'features_description', function () {
 } );
 ```
 
-Not HTML is allowed since the description is escaped.
+No HTML is allowed since the description is escaped.
 
 Add custom labels to admin instead of feature keys:
 

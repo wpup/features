@@ -2,7 +2,7 @@
   "name": "wpup/features",
   "type": "wordpress-plugin",
   "license": "MIT",
-  "description": "WordPress setting page page for feature flag-driven development.",
+  "description": "WordPress setting page page for feature flagging interface/implementation",
   "homepage": "https://github.com/wpup/features",
   "authors": [
     {

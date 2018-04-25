@@ -55,6 +55,8 @@ class Features {
 		$features   = $this->get_features();
 		$labels     = apply_filters( 'features_labels', [] );
 
+		ksort( $features );
+
 		add_submenu_page( $parent, $title, $title, $capability, $slug, function () use ( $features, $labels ) {
 			require_once __DIR__ . '/views/admin.php';
 		} );

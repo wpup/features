@@ -1,6 +1,7 @@
 # Features
 
 [![Build Status](https://travis-ci.org/wpup/features.svg?branch=master)](https://travis-ci.org/wpup/features)
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 WordPress setting page for [php-features](https://github.com/frozzare/php-features). That package is installed when using this plugin so no need to install it yourself.
 
